@@ -1,0 +1,13 @@
+{
+  "name": "layer-thinking",
+  "version": "0.0.1",
+  "description": "Creating simple to understand overviews",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "elm"
+  ],
+  "author": "David Bialik",
+  "license": "ISC"
+}
