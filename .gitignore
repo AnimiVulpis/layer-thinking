@@ -1,3 +1,7 @@
+# Project specific ignores
+
+dist/
+
 ### https://raw.github.com/github/gitignore/e7fb7caa622a31dc46b9bb59d9388db175bbcdb8/Elm.gitignore
 
 # elm-package generated files

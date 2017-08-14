@@ -3,10 +3,11 @@
   "version": "0.0.1",
   "description": "Creating simple to understand overviews",
   "scripts": {
-    "build": "elm-make src/Main.elm --debug --warn --output dist/main-debug.js",
-    "build:prod": "elm-make src/Main.elm --output dist/main.js && elm-make src/Main.elm --debug --output dist/main-debug.js",
+    "build": "elm-make src/Main.elm --debug --warn --output dist/main.js",
+    "build:prod": "elm-make src/Main.elm --output dist/main.js",
+    "copy": "cp -v src/index.html dist/ && cp -v src/init.js dist/",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "chokidar 'src/**/*.elm' --initial -c 'elm-make src/Main.elm --debug --warn --output dist/main-debug.js'"
+    "watch": "chokidar 'src/**/*.elm' --initial -c 'npm run copy && elm-format --yes src/**/*.elm && elm-make src/Main.elm --debug --warn --output dist/main.js'"
   },
   "keywords": [
     "elm"
@@ -15,6 +16,7 @@
   "license": "ISC",
   "devDependencies": {
     "chokidar-cli": "1.2.0",
-    "elm": "0.18.0"
+    "elm": "0.18.0",
+    "elm-format": "0.6.1-alpha"
   }
 }
