@@ -3,11 +3,18 @@
   "version": "0.0.1",
   "description": "Creating simple to understand overviews",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "elm-make src/Main.elm --debug --warn --output dist/main-debug.js",
+    "build:prod": "elm-make src/Main.elm --output dist/main.js && elm-make src/Main.elm --debug --output dist/main-debug.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "chokidar 'src/**/*.elm' --initial -c 'elm-make src/Main.elm --debug --warn --output dist/main-debug.js'"
   },
   "keywords": [
     "elm"
   ],
   "author": "David Bialik",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "chokidar-cli": "1.2.0",
+    "elm": "0.18.0"
+  }
 }
